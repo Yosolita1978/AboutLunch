@@ -1,0 +1,32 @@
+
+a {
+    position: absolute;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 8s;
+    animation-iteration-count:infinite;
+}
+
+a, a:focus, a:hover {
+    font-size: 205px;
+    color: black;
+    text-decoration: none;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%   {left:0px; top:0px;}
+    25%  {left: 800px; top:0px;}
+    50%  {left:200px; top:200px;}
+    75%  {left:0px; top:200px;}
+    100% {left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {left:0; top:0;}
+    25%  {left: calc(100vw - 25%); top: 0;}
+    50%  {left: calc(100vw - 25%); top: calc(100vh - 35%);}
+    75%  {left:0; top: calc(100vh - 35%);}
+    100% {left:0; top:0;}
+}
